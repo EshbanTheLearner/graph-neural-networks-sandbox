@@ -1,6 +1,6 @@
 import networkx as nx
 from karateclub import DeepWalk
-import sklean
+import sklearn
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -24,7 +24,7 @@ deepwalk_model.fit(G)
 embedding = deepwalk_model.get_embedding()
 print(f"Embedding Shape: {embedding.shape}")
 
-PCA = sklean.decomposition.PCA(n_components=2)
+PCA = sklearn.decomposition.PCA(n_components=2)
 pca_embedding = PCA.fit_transform(embedding)
 print(f"Low Dimension Embedding Shape: {pca_embedding.shape}")
 
